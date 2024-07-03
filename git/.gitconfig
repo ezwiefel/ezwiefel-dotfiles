@@ -1,0 +1,7 @@
+[user]
+	name = Erik Zwiefel
+	email = erikzw@google.com
+[push]
+	autoSetupRemote = true
+[init]
+	defaultBranch = main

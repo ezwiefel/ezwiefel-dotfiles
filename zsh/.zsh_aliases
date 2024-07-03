@@ -1,0 +1,21 @@
+# more ways to ls using eza
+if ! command -v eza &> /dev/null
+then
+    alias ll='ls -lh'
+    alias la='ls =lAh'
+    alias lsa="ls -aG"
+    alias la='ls -lAh'
+    alias lsa="ls -aG"
+    alias ldot='ls -ld .*'
+else
+    # When eza is found, create links
+    alias ls='eza'
+    alias ll='ls -lh --icons --no-user --octal-permissions --no-permissions --group-directories-first'
+    alias lt='ls -lh --icons --tree --level=3 --group-directories-first'
+    alias lsa="ls -aG"
+    alias la='ls -lAh'
+    alias lsa="ls -aG"
+    alias ldot='ls -ld .*'
+fi
+
+alias cls='clear'
