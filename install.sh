@@ -16,10 +16,29 @@ sudo apt install -y eza fzf
 git clone https://github.com/eza-community/eza.git ${EZA_REPO_DIR}
 echo 'export FPATH="${EZA_REPO_DIR}/completions/zsh:$FPATH"' >> ${CONFIG_DIR}/zsh/.zshenv
 
-# Install zoxide
-curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
+if ! command -v zoxide &> /dev/null
+then
+    # Install zoxide
+    curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
+fi
 
+# Create Symlinks - renaming the files that already exist, if there.
 
-# Create Symlinks
+if [ -e ${HOME}/.zshenv ]
+then
+    mv ${HOME}/.zshenv ${HOME}/.zshenv.old
+fi
+
 ln -s ${CONFIG_DIR}/zsh/.zshenv ${HOME}/.zshenv
+
+if [ -e ${HOME}/.zshrc ]
+then
+    mv ${HOME}/.zshrc ${HOME}/.zshrc.old
+fi
+
+if [ -e ${HOME}/.gitconfig ]
+then
+    mv ${HOME}/.gitconfig ${HOME}/.gitconfig.old
+fi
+
 ln -s ${CONFIG_DIR}/git/.gitconfig ${HOME}/.gitconfig
