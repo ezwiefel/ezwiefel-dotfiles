@@ -1,5 +1,6 @@
 [virtualenvs]
 in-project = true
+prefer-active-python = true
 
 [keyring]
 enabled = false

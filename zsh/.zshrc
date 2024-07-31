@@ -26,13 +26,14 @@ zstyle ':omz:update' frequency 13
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git eza zoxide gcloud docker poetry-env)
 
-source $ZSH/oh-my-zsh.sh
-
 zstyle ':omz:plugins:eza' 'dirs-first' yes
 zstyle ':omz:plugins:eza' 'git-status' yes
 zstyle ':omz:plugins:eza' 'header' yes
 zstyle ':omz:plugins:eza' 'show-group' no
 zstyle ':omz:plugins:eza' 'icons' yes
+zstyle ':omz:alpha:lib:git' async-prompt no
 
-. $ZDOTDIR/.zsh_aliases
+
+source $ZSH/oh-my-zsh.sh
+source $ZDOTDIR/.zsh_aliases
 eval "$(zoxide init zsh)"
