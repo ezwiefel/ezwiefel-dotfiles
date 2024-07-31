@@ -1,5 +1,5 @@
 # Path to your Oh My Zsh installation.
-export ZSH="$ZDOTDIR/ohmyzsh"
+export ZSH="${HOME}/.oh-my-zsh"
 ZOXIDE_CMD_OVERRIDE="cd"
 
 # Set name of the theme to load --- if set to "random", it will
