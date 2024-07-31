@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-export CONFIGDIR="$HOME/.config"
+export CONFIGDIR="$HOME/dotfiles"
 export ZCACHEDIR="$HOME/.cache/zsh"
 export ZDOTDIR="$CONFIGDIR/zsh"
 export PYENV_ROOT="$HOME/.local/share/pyenv"
