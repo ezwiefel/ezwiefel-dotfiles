@@ -15,7 +15,8 @@
 export CONFIGDIR="$HOME/dotfiles"
 export ZCACHEDIR="$HOME/.cache/zsh"
 export ZDOTDIR="$CONFIGDIR/zsh"
+export EZA_REPO_DIR="${CONFIG_DIR}/eza"
+export ZSH_FUNCTION_DIR="${ZDOTDIR}/functions"
 export PYENV_ROOT="$HOME/.local/share/pyenv"
 export PIPENV_VENV_IN_PROJECT=1
 export POETRY_VIRTUALENVS_IN_PROJECT=true
-export PATH="$HOME/.local/bin:$PATH"
